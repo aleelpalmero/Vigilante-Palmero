@@ -1,4 +1,4 @@
-[![Telegram dev group](https://img.shields.io/badge/Telegram%20Group-%40VigilantePalmero-blue.svg)](https://telegram.me/vigilantepalmero) [![Telegram bot](https://img.shields.io/badge/Telegram%20Bot-%40VigilantePalmero__bot-blue.svg)](https://telegram.me/VigilantePalmerobot)
+[![Telegram dev group](https://img.shields.io/badge/Telegram%20Group-%40VigilantePalmero-blue.svg)](https://telegram.me/vigilantepalmero) [![Telegram bot](https://img.shields.io/badge/Telegram%20Bot-%40VigilantePalmerobot-blue.svg)](https://telegram.me/VigilantePalmerobot)
 
 # El Vigilante Palmero
 
