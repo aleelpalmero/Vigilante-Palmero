@@ -11,6 +11,7 @@ class Bot extends CI_Controller {
 	}
 
 	public function index(){
+
 		$this->log($this->telegram->dump(TRUE) );
 
 		if($this->telegram->receive(["Quien eres vigilante", "identificate", "/start"])){ 																					## Para enviar mensajes - autorrespuestas
@@ -310,10 +311,13 @@ class Bot extends CI_Controller {
 
 
 																																																																																							// Enviar ubicación //
-		elseif($this->telegram->text_has(["enviame la", "mandame", "la"], "ubicacion") && $this->telegram->text_contains("hospital general", "hospital") && $this->telegram->words() <= 5){
+		elseif($this->telegram->text_has(["enviame la", "mandame", "la"], "ubicacion") && $this->telegram->text_contains("hospital general", "hospital") && $this->telegram->words() <= 20){
 			$this->telegram->send
 				->location(28.6726446,-17.7899276,726)
 			->send();
+            $this->telegram->send
+                ->text($this->telegram->emoji("\ud83d\udd30") ."<i>Ésta es la ubicación del Hospital General de La Palma</i>" .$this->telegram->emoji("\ud83d\udd30"), "HTML")
+            ->send();
 		//	$this->telegram->send
 		//		->file('sticker', "BQADAgADTAADGgZFBMqkqh9r_0fNAg");
 		}
@@ -367,42 +371,28 @@ elseif($this->telegram->receive("repite grupo 3 ", NULL, TRUE) && $user->id = $t
 			->send();
 		}
 																																							// Anuncio a todos
-		elseif($this->telegram->receive("anuncio grupo 1", NULL, TRUE) && $user->id = $this->config->item('creator')){
-
-			$this->telegram->send->chat("-1001006120181")
-
-			->file('voice', FCPATH . '/files/anuncio.mp3');
-		}
-
-		elseif($this->telegram->receive("anuncio grupo 2", NULL, TRUE) && $user->id = $this->config->item('creator')){
-
-			$this->telegram->send->chat("-1001006120181")
-
-			->file('voice', FCPATH . '/files/anuncio.mp3');
-		}
-
-		elseif($this->telegram->receive("anuncio grupo 3", NULL, TRUE) && $user->id = $this->config->item('creator')){
+		elseif($this->telegram->receive("anuncio todos", NULL, TRUE) && $user->id = $this->config->item('creator')){
 
 			$this->telegram->send->chat("-1001006120181")
 
 			->file('voice', FCPATH . '/files/anuncio.mp3');
 		}
 																																								// Enviar anuncios //
-		elseif($this->telegram->receive("normas grupo 1", NULL, TRUE) && $user->id = $this->config->item('creator')){
+		elseif($this->telegram->receive("anuncio grupo 1", NULL, TRUE) && $user->id = $this->config->item('creator')){
 
 			$this->telegram->send->chat("-1001006120181")
-			->file('audio', FCPATH .'/files/normas1.mp3');
+			->file('audio', FCPATH .'/files/anuncio.mp3');
 		}
 																																							// Anuncio controles //
-		elseif($this->telegram->receive("normas grupo 2", NULL, TRUE) && $user->id = $this->config->item('creator')){
+		elseif($this->telegram->receive("anuncio grupo 2", NULL, TRUE) && $user->id = $this->config->item('creator')){
 
-			$this->telegram->send->chat("-1001004172849")
-			->file('voice', FCPATH .'/files/normas2.ogg');
+			$this->telegram->send->chat("ID")
+			->file('voice', FCPATH .'/files/grupo 2.ogg');
 		}
 																																							// anuncio tu mejor oferta //
-		elseif($this->telegram->receive("normas grupo 3", NULL, TRUE) && $user->id = $this->config->item('creator')){
-			$this->telegram->send->chat("-1001048596638")
-			->file('voice', FCPATH .'/files/normas3.ogg');
+		elseif($this->telegram->receive("anuncio grupo 3", NULL, TRUE) && $user->id = $this->config->item('creator')){
+			$this->telegram->send->chat("ID")
+			->file('voice', FCPATH .'/files/grupo 3.ogg');
 		}
 																																		// Para saber donde estás, id grupo, id de usuario //
 		elseif($this->telegram->receive("donde estoy")){

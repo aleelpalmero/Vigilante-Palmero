@@ -1,0 +1,23 @@
+[04-Mar-2021 18:13:19 UTC] Request has failed with error 404: Not Found
+
+[04-Mar-2021 18:13:25 UTC] Request has failed with error 404: Not Found
+
+[04-Mar-2021 19:24:51 UTC] Request has failed with error 400: Bad Request: can't remove chat owner
+
+[04-Mar-2021 19:24:51 UTC] Request has failed with error 400: Bad Request: can't remove chat owner
+
+[04-Mar-2021 19:24:56 UTC] Request has failed with error 400: Bad Request: can't remove chat owner
+
+[04-Mar-2021 19:24:56 UTC] Request has failed with error 400: Bad Request: can't remove chat owner
+
+[04-Mar-2021 19:31:22 UTC] Request has failed with error 400: Bad Request: chat not found
+
+[04-Mar-2021 19:31:30 UTC] Request has failed with error 400: Bad Request: chat not found
+
+[04-Mar-2021 19:31:55 UTC] Request has failed with error 400: Bad Request: chat not found
+
+[04-Mar-2021 19:32:17 UTC] Request has failed with error 400: Bad Request: chat not found
+
+[14-Mar-2021 01:58:10 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/tibicenas/bot.tibicenas.club/system/core/compat/password.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/tibicenas/bot.tibicenas.club/system/core/CodeIgniter.php on line 286
+[14-Mar-2021 01:58:11 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/tibicenas/bot.tibicenas.club/system/core/compat/standard.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/tibicenas/bot.tibicenas.club/system/core/CodeIgniter.php on line 287
+[14-Mar-2021 01:58:11 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/tibicenas/bot.tibicenas.club/system/core/compat/standard.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/tibicenas/bot.tibicenas.club/system/core/CodeIgniter.php on line 287
